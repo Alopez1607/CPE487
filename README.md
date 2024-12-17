@@ -2,7 +2,7 @@
 ---
 ![create project](https://www.fizzcreations.com/wp-content/uploads/2020/01/PAC-MAN-Banner.jpg)
 
-## Coin Collecting Maze - Pac-Man Inspired
+# Coin Collecting Maze - Pac-Man Inspired
 ---
 # Description of expected behavior
   The project is a VGA-based interactive game that uses an FPGA to render a Pac-Man-inspired maze where a pac-man shaped ball collects coins and navigates to the maze exit. The game starts with the ball positioned at an initial location, and coins are distributed throughout the maze. The player uses the buttons on the board (btnU, btnD, btnL, btnR) to control the ball's movement as well as btnc to reset the game, while collision detection prevents it from passing through walls. As the ball overlaps with coins, they disappear, and the game tracks the total coins collected while displaying the coin count on the board display. Once all coins are collected, the player must guide the ball to the exit of the maze to reset the game. 
@@ -12,22 +12,23 @@
  - VGA connector 
  - Nexys A7-100T board
  - HDMI cable
+   
 # Steps to run the code 
-Create a new RTL project *ball* in vivado quick start.
+###Create a new RTL project *ball* in vivado quick start.
 ![create project](https://raw.githubusercontent.com/Alopez1607/CPE487/refs/heads/main/Picture/Screenshot%20(57).png)
-Add sources.
+###Add sources.
 ![add sources](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(60).png)
-Add constraints. 
+###Add constraints. 
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(61).png)
-Choose Nexys A7-100T board for the project.
+###Choose Nexys A7-100T board for the project.
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(62).png)
-Run synthesis.
+###Run synthesis.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(64).png)
-Run Implementation.
+###Run Implementation.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(65).png)
-Generate bitstream.
+###Generate bitstream.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(66).png)
-Open 'hardware manager' and click 'Open target' then 'auto connect'. Click 'Program Device' then xc7a100t_0 to download vga_top.bit to the Nexys A7 board.
+###Open 'hardware manager' and click 'Open target' then 'auto connect'. Click 'Program Device' then xc7a100t_0 to download vga_top.bit to the Nexys A7 board.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(67).png)
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(68).png)
 
