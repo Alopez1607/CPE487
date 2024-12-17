@@ -1,6 +1,8 @@
 ### CPE487 Final Project
 ---
-## Coin Collecting Maze
+![create project](https://www.fizzcreations.com/wp-content/uploads/2020/01/PAC-MAN-Banner.jpg)
+
+## Coin Collecting Maze - Pac-Man Inspired
 ---
 # Description of expected behavior
   The project is a VGA-based interactive game that uses an FPGA to render a Pac-Man-inspired maze where a pac-man shape ball collects coins and navigates to the maze exit. The game starts with the ball positioned at an initial location, and coins are distributed throughout the maze. The player uses the buttons on the board (btnU, btnD, btnL, btnR) to control the ball's movement as well as btnc to reset the game, while collision detection prevents it from passing through walls. As the ball overlaps with coins, they disappear, and the game tracks the total coins collected while displaying the coin count on the board display. Once all coins are collected, the player must guide the ball to the exit of the maze to reset the game. 
@@ -32,20 +34,77 @@ Open 'hardware manager' and click 'Open target' then 'auto connect'. Click 'Prog
 # Description of inputs and outputs added
 
 ## Ball.vhd
-        btnu      : IN STD_LOGIC;
-        btnd      : IN STD_LOGIC;
-        btnl      : IN STD_LOGIC;
-        btnr      : IN STD_LOGIC;
+    Added inputs and outputs to Entity 
+        btnu      : IN STD_LOGIC; -- up button
+        btnd      : IN STD_LOGIC; -- down button
+        btnl      : IN STD_LOGIC; --left button
+        btnr      : IN STD_LOGIC; -- right button
         reset     : IN STD_LOGIC; -- New reset button
-        coins : Out std_logic_vector (15 downto 0)
+        coins : Out std_logic_vector (15 downto 0) -- coin count output 
 ## Vga_top.vhd
+    Added inputs and outputs to Entity
         btnu    : IN STD_LOGIC;  -- Button for moving ball up
         btnd  : IN STD_LOGIC;  -- Button for moving ball down
-        btnl    : IN STD_LOGIC;
-        btnr  : IN STD_LOGIC;
-        btn0  : IN STD_LOGIC;
-        SEG7_anode : out std_logic_vector (7 downto 0);
-        SEG7_seg : OUT std_logic_vector (6 downto 0)
+        btnl    : IN STD_LOGIC; -- Button for moving ball to the right 
+        btnr  : IN STD_LOGIC; -- Button for moving ball to thr right
+        btn0  : IN STD_LOGIC; -- Button for reset
+        SEG7_anode : out std_logic_vector (7 downto 0); -- leddec16 anode 
+        SEG7_seg : OUT std_logic_vector (6 downto 0) --leddec16 segment 
+
+         COMPONENT ball added inputs and outputs
+            btnu    : IN STD_LOGIC;
+            btnd  : IN STD_LOGIC;
+            btnl    : IN STD_LOGIC;
+            btnr  : IN STD_LOGIC;
+            reset     : IN STD_LOGIC; -- New reset butto
+            coins : Out std_logic_vector (15 downto 0)
+
+             Component leddec16 added input and outputs to vga_top
+    
+        dig : IN STD_LOGIC_VECTOR (2 DOWNTO 0); -- which digit to currently display
+		    data : IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- 16-bit (4-digit) data
+		    anode : OUT STD_LOGIC_VECTOR (7 DOWNTO 0); -- which anode to turn on
+		    seg : OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+	
+        Added inputs and outputs PORT MAP for ball
+            btnu    => btnu,
+            btnd  => btnd,
+            btnl => btnl,
+            btnr => btnr,
+            reset => btn0,
+            coins => data
+            
+       Modified Port Map for ledded16
+        dig => led_mpx, data => data,
+        anode => SEG7_anode, seg => SEG7_seg
+        
+         
+ ## Vga_top.xdc
+
+    set_property -dict { PACKAGE_PIN B11   IOSTANDARD LVCMOS33 } [get_ports { vga_hsync }]; #IO_L4P_T0_15 Sch=vga_hs
+    set_property -dict { PACKAGE_PIN B12   IOSTANDARD LVCMOS33 } [get_ports { vga_vsync }]; #IO_L3N_T0_DQS_AD1N_15 Sch=vga_vs
+    set_property -dict { PACKAGE_PIN M18 IOSTANDARD LVCMOS33 } [get_ports { btnu }];    # Adjust pin P3 as per your board
+    set_property -dict { PACKAGE_PIN P18 IOSTANDARD LVCMOS33 } [get_ports { btnd }];  # Adjust pin P4 as per your board
+    set_property -dict { PACKAGE_PIN P17 IOSTANDARD LVCMOS33 } [get_ports { btnl }];    # Adjust pin P3 as per your board
+    set_property -dict { PACKAGE_PIN M17 IOSTANDARD LVCMOS33 } [get_ports { btnr }];  # Adjust pin P4 as per your board
+    set_property -dict { PACKAGE_PIN N17 IOSTANDARD LVCMOS33 } [get_ports { btn0 }];  # Adjust pin P4 as per your board
+
+    set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[0]}]
+    set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[1]}]
+    set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[2]}]
+    set_property -dict {PACKAGE_PIN K13 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[3]}]
+    set_property -dict {PACKAGE_PIN K16 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[4]}]
+    set_property -dict {PACKAGE_PIN R10 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[5]}]
+    set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[6]}]
+
+    set_property -dict {PACKAGE_PIN U13 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[7]}]
+    set_property -dict {PACKAGE_PIN K2 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[6]}]
+    set_property -dict {PACKAGE_PIN T14 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[5]}]
+    set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[4]}]
+    set_property -dict {PACKAGE_PIN J14 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[3]}]
+    set_property -dict {PACKAGE_PIN T9 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[2]}]
+    set_property -dict {PACKAGE_PIN J18 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[1]}]
+    set_property -dict {PACKAGE_PIN J17 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[0]}]   
 
 # Modifications
 We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modify ball motion using buttons and incorporated up and down buttons as well as reset. Additionally, we incorporated hits counter from lab 6 for coin collection and added leddec16 to display the coin count. Lastly we added buttons (btn) for ball movement as well as anodes and seg for the display to the constraints file. 
