@@ -170,7 +170,28 @@ Downloaded leddec16.vhd and added it to the project
 
 **Component leddec16 added**
   - Port map: data => data
+# Finalized Game 
 
+**Resetting game with reset button**
+
+
+https://github.com/user-attachments/assets/aa9e7270-596a-4dd0-be6a-ce69b7abaa89
+
+
+**Not all coins collected and going through the exit - Game doesn't reset**
+
+
+https://github.com/user-attachments/assets/51cbece5-d19f-4a76-88cf-877a84429907
+
+
+**All coins collected - Game resets**
+
+
+https://github.com/user-attachments/assets/9f3f0a9a-1f28-4799-8194-ba9a93ba3f4c
+
+***Longer format videos showing the whole game on Youtube, video is not supported by github due to size*** 
+https://youtu.be/W3K_JPiNaMk
+https://youtu.be/8EL2X68tUVQ
 # Team Contributions
 Adriana: draw pacman ball, leddec16, vga_top.xdc, motion of the ball, reset
 
