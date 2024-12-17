@@ -146,7 +146,7 @@ Used AND statement to not include triangle cutout for the mouth
 Incorporated maze draw (mdraw) process: 
 - Used pixel_col and pixel_row and used ‘and’ statements to state the area that the wall would cover
 
-  ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(73).png)
+![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(73).png)
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(74).png)
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(72).png)
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(75).png)
@@ -168,13 +168,13 @@ Added mball process for ball movement
 - Added collision detection
   - Used IF NOT statement that stated if ball was not on maze walls, then ball position would be updated
  
-
-
 https://github.com/user-attachments/assets/a324dd75-354f-4c93-bbe3-fee300a66ae9
 
 
- ---   
+---   
+
 Lastly we mapped coin_count to output signal coin
+
 ---
 ## Leddec16.vhd
 Downloaded leddec16.vhd and added it to the project 
