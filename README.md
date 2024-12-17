@@ -134,6 +134,8 @@ We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modif
 ---      
 Changed color of Signals maze_on(blue), ball_on(yellow), and coin_on(pink) individually as well as the background by setting all color signals to ‘0’
 
+### Final color design
+
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(70).png)
 ---
 Added pacman ball draw (bdraw) process:
@@ -145,11 +147,15 @@ Used AND statement to not include triangle cutout for the mouth
 ---
 Incorporated maze draw (mdraw) process: 
 - Used pixel_col and pixel_row and used ‘and’ statements to state the area that the wall would cover
-
+### Simple maze
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(73).png)
+### More complicated maze
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(74).png)
+### Pac-man maze used for inspiration
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(72).png)
+### Pac-man maze
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(75).png)
+### Final naze design
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(71).png)
 
 ---
