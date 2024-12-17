@@ -167,6 +167,7 @@ Downloaded leddec16.vhd and added it to the project
 
 **In component ball, coins and buttons were added**
   - Port map: Buttons added, and coins mapped to data
+
 **Component leddec16 added**
   - Port map: data => data
 
