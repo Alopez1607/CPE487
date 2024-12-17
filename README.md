@@ -232,6 +232,7 @@ Adriana: draw pacman ball, leddec16, vga_top.xdc, motion of the ball, reset
 Caroline: draw coins, coin collection, maze, wall_constraint
 
 **Project timeline** 
+
 We started working on the project Friday, December 6th and completed the code by Sunday, December 15th.  
 
 **Difficulties encountered**: The biggest difficulty we encountered was figuring out how to draw the maze since we first wanted to use a process like the batdraw from lab 6 but we would have had to do a process for every single rectangle on the maze. Finally we decided to use pixel_row and pixel_col as well as 'and' statements to draw the maze after doing some research.
