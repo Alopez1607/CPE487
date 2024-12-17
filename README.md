@@ -109,7 +109,7 @@
 
 # Modifications
 We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modify ball motion using buttons and incorporated up and down buttons as well as reset. Additionally, we incorporated hits counter from lab 6 for coin collection and added leddec16 to display the coin count. Lastly we added buttons (btn) for ball movement as well as anodes and seg for the display to the constraints file. 
-
+---
 ## Future Modifications
 
 - Modify shape of the ball to the Pac-Man iconic shape (circle with triangle cutout)
@@ -118,7 +118,7 @@ We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modif
 - Draw multiple coins and add them to the maze
 - Change colors to match the game
 - Reset game after all coins have been collected and the ball reaches the exit of the maze
-
+---
 ## Ball.vhd
 
 - In entity ball, the buttons (btnu, btnd, btnl, btnr) were added as well as reset and coins
@@ -130,9 +130,10 @@ We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modif
     - Coin_positions_y
     - Coin_present 
     - Signals Ball_on, maze_on_, coin_on were also added
-      
+---      
 Changed color of Signals maze_on(blue), ball_on(yellow), and coin_on(pink) individually as well as the background by setting all color signals to ‘0’
-
+![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(70).png)
+---
 Added pacman ball draw (bdraw) process:
 - Used pixel_col and pixel_row as well as ball_x and ball_y to draw the ball as a circle
 Used AND statement to not include triangle cutout for the mouth
