@@ -172,7 +172,7 @@ Downloaded leddec16.vhd and added it to the project
 
 # Team Contributions
 Adriana: draw, leddec16, constraints, motion of the ball, reset
-Caroline draw coins, coin collection, maze, wall_constraint
+Caroline: draw coins, coin collection, maze, wall_constraint
 
 
 
