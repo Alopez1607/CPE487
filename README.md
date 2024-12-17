@@ -142,14 +142,14 @@ Incorporated maze draw (mdraw) process:
 Incorporated coin draw process
 - Used array for x and y coordinates of the coin
 - Made it easier to draw each coin in a for loop
-- For the for loop it uses index 0 to number_of_coins-1 and so it iterates 5 times which is the number of coins and does the circle equation each time using the x and y coordinates and goes through the array, each time it goes through the for loop it goes to the next coordinates in the next index of the array
+- For the for loop, it uses index 0 to number_of_coins-1 and so it iterates 5 times which is the number of coins and does the circle equation each time for each coin using the x and y coordinates from the array (each time it goes through the for loop it goes to the next coordinates in the next index of the array)
 
 Added mball process for ball movement
 - Added reset functionality
     - when the button btn0 is pressed and when all coins are collected and ball goes past column 750
 - Added button movement
 - Added collision detection
-  - Used IF NOT statement that stated if ball not on maze walls, then update ball position
+  - Used IF NOT statement that stated if ball was not on maze walls, then ball position would be updated
     
 Lastly we mapped coin_count to output signal coin
 
