@@ -110,6 +110,7 @@
 # Modifications
 
 We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modify ball motion using buttons and incorporated up and down buttons as well as reset. Additionally, we incorporated hits counter from lab 6 for coin collection and added leddec16 to display the coin count. Lastly we added buttons (btn) for ball movement as well as anodes and seg for the display to the constraints file. 
+
 ---
 ## Future Modifications
 
@@ -163,7 +164,7 @@ Incorporated coin draw process
 - Used array for x and y coordinates of the coin
 - Made it easier to draw each coin in a for loop
 - For the for loop, it uses index 0 to number_of_coins-1 and so it iterates 5 times which is the number of coins and does the circle equation each time for each coin using the x and y coordinates from the array (each time it goes through the for loop it goes to the next coordinates in the next index of the array)
-
+### First time implementing 
   ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(69).png)
 
 ---
@@ -173,7 +174,9 @@ Added mball process for ball movement
 - Added button movement
 - Added collision detection
   - Used IF NOT statement that stated if ball was not on maze walls, then ball position would be updated
- 
+    
+### Ball movement with buttons and wall collisions
+
 https://github.com/user-attachments/assets/a324dd75-354f-4c93-bbe3-fee300a66ae9
 
 
