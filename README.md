@@ -224,10 +224,13 @@ https://github.com/user-attachments/assets/9f3f0a9a-1f28-4799-8194-ba9a93ba3f4c
 ***Longer format videos showing the whole game on Youtube, video is not supported by github due to size*** 
 https://youtu.be/W3K_JPiNaMk
 https://youtu.be/8EL2X68tUVQ
+
 # Team Contributions
 Adriana: draw pacman ball, leddec16, vga_top.xdc, motion of the ball, reset
 
 Caroline: draw coins, coin collection, maze, wall_constraint
+
+Difficulties encountered: The biggest difficulty we encountered was figuring out how to draw the maze since we first wanted to use a process like the batdraw from lab 6 but we would have had to do a process for every single triangle on the maze. Finally we decided to use pixel_row and pixel_col as well as 'and' statements to draw the maze
 
 
 
