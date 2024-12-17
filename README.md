@@ -14,21 +14,21 @@
  - HDMI cable
    
 # Steps to run the code 
-###Create a new RTL project *ball* in vivado quick start.
+### Create a new RTL project *ball* in vivado quick start.
 ![create project](https://raw.githubusercontent.com/Alopez1607/CPE487/refs/heads/main/Picture/Screenshot%20(57).png)
-###Add sources.
+### Add sources.
 ![add sources](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(60).png)
-###Add constraints. 
+### Add constraints. 
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(61).png)
 ###Choose Nexys A7-100T board for the project.
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(62).png)
-###Run synthesis.
+### Run synthesis.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(64).png)
-###Run Implementation.
+### Run Implementation.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(65).png)
-###Generate bitstream.
+### Generate bitstream.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(66).png)
-###Open 'hardware manager' and click 'Open target' then 'auto connect'. Click 'Program Device' then xc7a100t_0 to download vga_top.bit to the Nexys A7 board.
+### Open 'hardware manager' and click 'Open target' then 'auto connect'. Click 'Program Device' then xc7a100t_0 to download vga_top.bit to the Nexys A7 board.
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(67).png)
 ![add constrain](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(68).png)
 
