@@ -140,23 +140,42 @@ Added pacman ball draw (bdraw) process:
 - Used pixel_col and pixel_row as well as ball_x and ball_y to draw the ball as a circle
 Used AND statement to not include triangle cutout for the mouth
 
+![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(41).png)
+
+---
 Incorporated maze draw (mdraw) process: 
 - Used pixel_col and pixel_row and used ‘and’ statements to state the area that the wall would cover
 
+  ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(73).png)
+![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(74).png)
+![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(72).png)
+![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(75).png)
+![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(71).png)
+
+---
 Incorporated coin draw process
 - Used array for x and y coordinates of the coin
 - Made it easier to draw each coin in a for loop
 - For the for loop, it uses index 0 to number_of_coins-1 and so it iterates 5 times which is the number of coins and does the circle equation each time for each coin using the x and y coordinates from the array (each time it goes through the for loop it goes to the next coordinates in the next index of the array)
 
+  ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(69).png)
+
+---
 Added mball process for ball movement
 - Added reset functionality
     - when the button btn0 is pressed and when all coins are collected and ball goes past column 750
 - Added button movement
 - Added collision detection
   - Used IF NOT statement that stated if ball was not on maze walls, then ball position would be updated
-    
-Lastly we mapped coin_count to output signal coin
+ 
 
+
+https://github.com/user-attachments/assets/a324dd75-354f-4c93-bbe3-fee300a66ae9
+
+
+ ---   
+Lastly we mapped coin_count to output signal coin
+---
 ## Leddec16.vhd
 Downloaded leddec16.vhd and added it to the project 
 
