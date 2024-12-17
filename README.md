@@ -172,7 +172,7 @@ Downloaded leddec16.vhd and added it to the project
   - Port map: data => data
 
 # Team Contributions
-Adriana: draw pacman ball, leddec16, constraints, motion of the ball, reset
+Adriana: draw pacman ball, leddec16, vga_top.xdc, motion of the ball, reset
 
 Caroline: draw coins, coin collection, maze, wall_constraint
 
