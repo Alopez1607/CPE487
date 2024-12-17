@@ -82,13 +82,13 @@
          
  ## Vga_top.xdc
 
-    set_property -dict { PACKAGE_PIN B11   IOSTANDARD LVCMOS33 } [get_ports { vga_hsync }]; #IO_L4P_T0_15 Sch=vga_hs
-    set_property -dict { PACKAGE_PIN B12   IOSTANDARD LVCMOS33 } [get_ports { vga_vsync }]; #IO_L3N_T0_DQS_AD1N_15 Sch=vga_vs
-    set_property -dict { PACKAGE_PIN M18 IOSTANDARD LVCMOS33 } [get_ports { btnu }];    # Adjust pin P3 as per your board
-    set_property -dict { PACKAGE_PIN P18 IOSTANDARD LVCMOS33 } [get_ports { btnd }];  # Adjust pin P4 as per your board
-    set_property -dict { PACKAGE_PIN P17 IOSTANDARD LVCMOS33 } [get_ports { btnl }];    # Adjust pin P3 as per your board
-    set_property -dict { PACKAGE_PIN M17 IOSTANDARD LVCMOS33 } [get_ports { btnr }];  # Adjust pin P4 as per your board
-    set_property -dict { PACKAGE_PIN N17 IOSTANDARD LVCMOS33 } [get_ports { btn0 }];  # Adjust pin P4 as per your board
+    set_property -dict { PACKAGE_PIN B11   IOSTANDARD LVCMOS33 } [get_ports { vga_hsync }]; 
+    set_property -dict { PACKAGE_PIN B12   IOSTANDARD LVCMOS33 } [get_ports { vga_vsync }]; 
+    set_property -dict { PACKAGE_PIN M18 IOSTANDARD LVCMOS33 } [get_ports { btnu }];    
+    set_property -dict { PACKAGE_PIN P18 IOSTANDARD LVCMOS33 } [get_ports { btnd }];  
+    set_property -dict { PACKAGE_PIN P17 IOSTANDARD LVCMOS33 } [get_ports { btnl }];   
+    set_property -dict { PACKAGE_PIN M17 IOSTANDARD LVCMOS33 } [get_ports { btnr }];  
+    set_property -dict { PACKAGE_PIN N17 IOSTANDARD LVCMOS33 } [get_ports { btn0 }];  
 
     set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[0]}]
     set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {SEG7_seg[1]}]
@@ -108,6 +108,7 @@
     set_property -dict {PACKAGE_PIN J17 IOSTANDARD LVCMOS33} [get_ports {SEG7_anode[0]}]   
 
 # Modifications
+
 We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modify ball motion using buttons and incorporated up and down buttons as well as reset. Additionally, we incorporated hits counter from lab 6 for coin collection and added leddec16 to display the coin count. Lastly we added buttons (btn) for ball movement as well as anodes and seg for the display to the constraints file. 
 ---
 ## Future Modifications
@@ -132,6 +133,7 @@ We used lab 3 (vgball) as a starter code, we also used lab 6 bat motion to modif
     - Signals Ball_on, maze_on_, coin_on were also added
 ---      
 Changed color of Signals maze_on(blue), ball_on(yellow), and coin_on(pink) individually as well as the background by setting all color signals to ‘0’
+
 ![add board](https://github.com/Alopez1607/CPE487/blob/main/Picture/Screenshot%20(70).png)
 ---
 Added pacman ball draw (bdraw) process:
